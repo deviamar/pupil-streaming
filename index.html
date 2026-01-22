@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <style>
     html, body {
       margin: 0;
@@ -9,22 +9,40 @@
       background: black;
       overflow: hidden;
     }
+
     .row {
       display: flex;
       width: 100vw;
       height: 100vh;
     }
-    iframe {
+
+    .eye {
       width: 50vw;
       height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    iframe {
+      width: 100vw;              /* BIGGER than container */
+      height: 100vh;
+      transform: scale(1.6);     /* adjust this (1.4–2.0) */
+      transform-origin: center;
       border: none;
+      position: absolute;
+      left: -25vw;               /* center crop */
+      top: 0;
     }
   </style>
 </head>
 <body>
   <div class="row">
-    <iframe src="https://vdo.ninja/?view=WwrRPQA"></iframe>
-    <iframe src="https://vdo.ninja/?view=WwrRPQA"></iframe>
+    <div class="eye">
+      <iframe src="PASTE_VDO_VIEWER_LINK"></iframe>
+    </div>
+    <div class="eye">
+      <iframe src="PASTE_VDO_VIEWER_LINK"></iframe>
+    </div>
   </div>
 </body>
 </html>
